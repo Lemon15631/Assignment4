@@ -39,7 +39,7 @@ function indexdisplay() {
     let productlist = document.getElementById("indexproduct");
     let htmltag = "";
     items.forEach((item, i) => {
-        htmltag = "<div class='col-lg-3'> <div class='card'> <div class='card-header'> <img class='img-item' src='./Assignment3/image/" + item.pic +
+        htmltag = "<div class='col-lg-3'> <div class='card'> <div class='card-header'> <img class='img-item' src='/image/" + item.pic +
             ".jpg','.webs' alt=''> <div class='card-body'><h4 class='card-title'>Destination:" + item.name +
             "</h4> <h4 class='card-text'>Price:RM" + item.price +
             "</h4> <a href='#' class='btn btn-primary add-to-cart'>Add To Cart</a></div></div></div></div>";
@@ -84,7 +84,7 @@ function cartpagedisplay() {
     productcontainer = document.getElementById("product-container")
     if (itemcart) {
         let totalprice = 0; itemcart.forEach((item, i) => {
-            let htmltag = "<div class='col-3'><img class='img-cart'src='./Assignment3/image/" + item.pic +
+            let htmltag = "<div class='col-3'><img class='img-cart'src='/image/" + item.pic +
                 ".jpg',.webs'></img></div><div class='col-3'><p>" + item.name + "</p></div><div class='col-3'>" + item.price +
                 "</div><div class='col-3'><a class='btn btn-primary delbtn'>Delete</a></div><br><hr>";
             productcontainer.innerHTML += htmltag; totalprice = totalprice + item.price;
